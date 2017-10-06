@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPPatterns.Chap3.Layered", "ASPPatterns.Chap3.Layered\ASPPatterns.Chap3.Layered.csproj", "{5F275E83-2FF6-4117-8333-A137E03C7818}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPPatterns.Chap3.Layered.WebUI", "ASPPatterns.Chap3.Layered\ASPPatterns.Chap3.Layered.WebUI.csproj", "{5F275E83-2FF6-4117-8333-A137E03C7818}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPPatterns.Chap3.Layered.Repository", "ASPPatterns.Chap3.Layered.Repository\ASPPatterns.Chap3.Layered.Repository.csproj", "{90ED8759-809A-47A7-9B1E-BDCFCCA62248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPPatterns.Chap3.Layered.Model", "ASPPatterns.Chap3.Layered.Model\ASPPatterns.Chap3.Layered.Model.csproj", "{97A12E3F-9012-4396-B013-37A8A907D54A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPPatterns.Chap3.Layered.Service", "ASPPatterns.Chap3.Layered.Service\ASPPatterns.Chap3.Layered.Service.csproj", "{256F4F62-452B-4A2C-B330-6CE4249AB02A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPPatterns.Chap3.Layered.Presentation", "ASPPatterns.Chap3.Layered.Presentation\ASPPatterns.Chap3.Layered.Presentation.csproj", "{3B3EFABD-85B5-48B2-8D2A-B3BCBA6386E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{5F275E83-2FF6-4117-8333-A137E03C7818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F275E83-2FF6-4117-8333-A137E03C7818}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F275E83-2FF6-4117-8333-A137E03C7818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90ED8759-809A-47A7-9B1E-BDCFCCA62248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90ED8759-809A-47A7-9B1E-BDCFCCA62248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90ED8759-809A-47A7-9B1E-BDCFCCA62248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90ED8759-809A-47A7-9B1E-BDCFCCA62248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A12E3F-9012-4396-B013-37A8A907D54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A12E3F-9012-4396-B013-37A8A907D54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A12E3F-9012-4396-B013-37A8A907D54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A12E3F-9012-4396-B013-37A8A907D54A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{256F4F62-452B-4A2C-B330-6CE4249AB02A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256F4F62-452B-4A2C-B330-6CE4249AB02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256F4F62-452B-4A2C-B330-6CE4249AB02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256F4F62-452B-4A2C-B330-6CE4249AB02A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B3EFABD-85B5-48B2-8D2A-B3BCBA6386E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3EFABD-85B5-48B2-8D2A-B3BCBA6386E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3EFABD-85B5-48B2-8D2A-B3BCBA6386E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3EFABD-85B5-48B2-8D2A-B3BCBA6386E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

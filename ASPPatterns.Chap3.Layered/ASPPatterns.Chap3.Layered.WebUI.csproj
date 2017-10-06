@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ASPPatterns.Chap3.Layered</RootNamespace>
-    <AssemblyName>ASPPatterns.Chap3.Layered</AssemblyName>
+    <RootNamespace>ASPPatterns.Chap3.Layered.WebUI</RootNamespace>
+    <AssemblyName>ASPPatterns.Chap3.Layered.WebUI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -49,6 +49,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="StructureMap">
+      <HintPath>..\Lib\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -167,6 +170,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -180,6 +184,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Shop.mdf" />
+    <Content Include="App_Data\Shop_log.ldf">
+      <DependentUpon>Shop.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -235,9 +243,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -245,6 +251,24 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ASPPatterns.Chap3.Layered.Model\ASPPatterns.Chap3.Layered.Model.csproj">
+      <Project>{97a12e3f-9012-4396-b013-37a8a907d54a}</Project>
+      <Name>ASPPatterns.Chap3.Layered.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ASPPatterns.Chap3.Layered.Presentation\ASPPatterns.Chap3.Layered.Presentation.csproj">
+      <Project>{3b3efabd-85b5-48b2-8d2a-b3bcba6386e8}</Project>
+      <Name>ASPPatterns.Chap3.Layered.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ASPPatterns.Chap3.Layered.Repository\ASPPatterns.Chap3.Layered.Repository.csproj">
+      <Project>{90ed8759-809a-47a7-9b1e-bdcfcca62248}</Project>
+      <Name>ASPPatterns.Chap3.Layered.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ASPPatterns.Chap3.Layered.Service\ASPPatterns.Chap3.Layered.Service.csproj">
+      <Project>{256f4f62-452b-4a2c-b330-6ce4249ab02a}</Project>
+      <Name>ASPPatterns.Chap3.Layered.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,30 +1,34 @@
-﻿using System;
+﻿using ASPPatterns.Chap3.Layered.Model;
+using ASPPatterns.Chap3.Layered.Presentation;
+using ASPPatterns.Chap3.Layered.Service;
+using StructureMap;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
-namespace ASPPatterns.Chap3.Layered.Controllers
+namespace ASPPatterns.Chap3.Layered.WebUI.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller, IProductListView
     {
+        private ProductListPresenter _presenter;
+        private IList<ProductViewModel> _products;
+
         public ActionResult Index()
         {
-            return View();
+            _presenter = new ProductListPresenter(this,
+           ObjectFactory.GetInstance<Service.ProductService>());
+
+            _presenter.Display();
+
+            return View(_products);
         }
 
-        public ActionResult About()
+        public void Display(IList<ProductViewModel> Products)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            _products = Products;
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        public CustomerType CustomerType { get; }
 
-            return View();
-        }
+        public string ErrorMessage { get; set; }
     }
 }
